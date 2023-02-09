@@ -2,12 +2,19 @@
 - - -06-File-Handling-Exercise.docx
 .py
 - - -1_even_lines.py
+- - -1_even_lines.py
+- - -2_line_numbers.py
 - - -2_line_numbers.py
 - - -3_file_manipulator.py
+- - -3_file_manipulator.py
+- - -4_directory_traversal.py
 - - -4_directory_traversal.py
 - - -example.py
 - - -rename_files.py
+.rar
+- - -homework.rar
 .txt
 - - -example.txt
 - - -output.txt
+- - -report.txt
 - - -text.txt
