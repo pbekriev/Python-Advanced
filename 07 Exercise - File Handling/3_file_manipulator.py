@@ -14,20 +14,21 @@ while True:
     elif command == "Replace":
         try:
             with open(f"files/{info[0]}", "r") as file:
-                text = file.read()
+                text = file.readlines()
 
-            text = text.replace(info[1], info[2])
+            for i in range(len(text)):
+                text[i] = text[i].replace(info[1], info[2])
 
             with open(f"files/{info[0]}", "w") as file:
-                file.write(text)
+                file.write("".join(text))
         except FileNotFoundError:
-            print(f"An error occurred!")
+            print(f"An error occurred")
 
     elif command == "Delete":
         try:
             os.remove(f"files/{info[0]}")
         except FileNotFoundError:
-            print("An error occurred!")
+            print("An error occurred")
 
     elif command == "End":
         break
