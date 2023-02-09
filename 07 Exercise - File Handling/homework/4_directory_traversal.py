@@ -3,7 +3,7 @@ import os
 
 def save_extensions(dir_name, first_level=False):
     for filename in os.listdir(dir_name):
-        file = os.path.join(dir_name, filename)  # dir_name + / + filename
+        file = os.path.join(dir_name, filename)
 
         if os.path.isfile(file):
             extension = filename.split(".")[-1]
@@ -13,12 +13,12 @@ def save_extensions(dir_name, first_level=False):
 
             extensions[extension].append(filename)
 
-        elif os.path.isdir(file) and not first_level:  # first_level == False
+        elif os.path.isdir(file) and not first_level:
             save_extensions(file, first_level=True)
 
 
 directory = input()
-extensions = {}  # ex. {.py: [hello_world.py, z_file.py]}
+extensions = {}
 result = []
 
 save_extensions(directory)
